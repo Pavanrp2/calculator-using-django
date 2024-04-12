@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    *{
+        background-color: #EBDCFE;
+    }
+
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content:center; 
+    }
+
+    .row{
+        border: 2px solid #808080;
+        border-radius: 5px;
+        width: 200px;
+        padding: 50px;
+        margin-left: 40%;
+    }
+
+    .input{
+        padding: 10px;
+        margin: 10px;
+    }
+
+    button{
+        border-radius: 5px;
+        font-weight: 700;
+        width: 100px;
+        height: 30px;
+        margin-left: 25%;
+    }
+
+    
+
+</style>
+<body>
+    <h1 class="heading">calculator</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="input">
+                    <label for="">Value 1</label>
+                    <input type="text" name="num1" class="form-control" id=""><br>
+                </div>
+
+                <div class="input">
+                    <label for="">Select Operator</label>
+                    <select name="opr" class="form-control" id="">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select><br>
+                </div>
+
+                <div class="input">
+                    <label for="">Value 2</label>
+                    <input type="text" name="num2" class="form-control" id=""><br>
+                </div>
+
+                <button type="submit">Calculate</button><br>
+
+                <div class="input">
+                    <label for="">Output</label>
+                    <input type="text" name="" value="{{c}}" class="form-control" id="">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
