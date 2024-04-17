@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even-odd</title>
+</head>
+
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    button{
+        border-radius: 5px;
+        font-weight: 700;
+        width: 100px;
+        height: 30px;
+    }
+    .input{
+        border-radius: 5px;
+        font-weight: 700;
+        width: 400px;
+        height: 30px;
+    }
+
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Even Odd</h1>
+
+        <div class="content">
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <label for="" class="input">Value</label>
+                    <input type="text" name="value1" class="input">
+                </div>
+
+                <div class="input-group">
+                    <button>Submit</button>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="" value="{{d}}" class="input">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

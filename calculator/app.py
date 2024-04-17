@@ -22,3 +22,14 @@ def calculator(request):
         c="Invalid operator"
     print(c)
     return render(request, 'index.html',{"c":c})
+
+
+def evenodd(request):
+    d=''
+    if request.method=='POST':
+        n=eval(request.POST.get('value1'))
+        if n%2==0:
+            d = 'Even Number'
+        else:
+            d = 'Odd Number'
+    return render(request, 'even-odd.html',{'d':d})

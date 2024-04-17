@@ -21,5 +21,6 @@ from calculator import app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculator/', app.calculator)
+    path('calculator/', app.calculator),
+    path('evenodd/', app.evenodd)
 ]
